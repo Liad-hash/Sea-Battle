@@ -136,18 +136,23 @@ public class Board {
     // pretty prints a given board view to the console.
     // you can pass fog-of-war for enemy, or full view for yourself.
     public static void printView(char[][] view) {
-        int n = view.length;
-        System.out.print("   ");
-        for (int c = 0; c < n; c++) System.out.print(c + " ");
-        System.out.println();
-        for (int r = 0; r < n; r++) {
-            System.out.printf("%2d ", r);
-            for (int c = 0; c < n; c++) {
-                System.out.print(view[r][c] + " ");
-            }
-            System.out.println();
-        }
+    int n = view.length;
+
+    System.out.print("  ");
+    for (int c = 0; c < n; c++) {
+        System.out.print(c + " ");
     }
+    System.out.println();
+
+    for (int r = 0; r < n; r++) {
+        System.out.print(r + " ");
+        for (int c = 0; c < n; c++) {
+            System.out.print(view[r][c] + " ");
+        }
+        System.out.println();
+    }
+}
+
 
     // computes the list of cells for a ship placement or returns null if out of bounds.
     // centralizes the placement math for both canPlaceShip and placeShip.
