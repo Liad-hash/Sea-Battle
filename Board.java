@@ -152,16 +152,27 @@ public class Board {
     // computes the list of cells for a ship placement or returns null if out of bounds.
     // centralizes the placement math for both canPlaceShip and placeShip.
     private List<Coord> computeCells(int row, int col, int shipSize, Orientation ori) {
-        List<Coord> cells = new ArrayList<>();
-        for (int i = 0; i < shipSize; i++) {
-            int rr = row + (ori == Orientation.VERTICAL ? i : 0);
-            int cc = col + (ori == Orientation.HORIZONTAL ? i : 0);
-            Coord c = new Coord(rr, cc);
-            if (!c.inBounds(size)) return null;
-            cells.add(c);
+    List<Coord> cells = new ArrayList<>();
+
+    for (int i = 0; i < shipSize; i++) {
+        int rr = row;
+        int cc = col;
+
+        if (ori == Orientation.VERTICAL) {
+            rr = row + i;
+        } 
+        else if (ori == Orientation.HORIZONTAL) {
+            cc = col + i;
         }
-        return cells;
+
+        Coord c = new Coord(rr, cc);
+        if (!c.inBounds(size)) return null;
+        cells.add(c);
     }
+
+    return cells;
+}
+
 
     // finds which ship is located at a coordinate (if any).
     // used after a hit to mark sunk/hit state.
