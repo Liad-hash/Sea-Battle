@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:contentDescription="back"
+        android:src="@android:drawable/ic_media_previous"
+        android:background="@android:color/transparent"
+        android:layout_width="48dp"
+        android:layout_height="48dp"/>
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:text="edit map"
+        android:textSize="20sp"
+        android:layout_toEndOf="@id/btnBack"
+        android:layout_marginStart="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <FrameLayout
+        android:id="@+id/boardContainer"
+        android:layout_below="@id/tvTitle"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@+id/btnApply"
+        android:background="#1A000000">
+
+        <TextView
+            android:layout_gravity="center"
+            android:text="10x10 board placeholder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/btnApply"
+        android:text="apply"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>
