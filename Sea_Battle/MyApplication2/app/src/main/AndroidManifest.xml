@@ -27,7 +27,9 @@
         <activity android:name=".SignUpActivity" />
         <activity android:name=".LobbyActivity" />
         <activity android:name=".EditMapActivity" />
-        <activity android:name=".BattleActivity" />
+        <activity
+            android:name=".BattleActivity"
+            android:screenOrientation="landscape" />
         <activity android:name=".WinActivity" />
 
     </application>

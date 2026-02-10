@@ -35,17 +35,17 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content">
 
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="240dp"
-                android:background="#1A000000">
+            <TextView
+                android:text="enemy"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
 
-                <TextView
-                    android:layout_gravity="center"
-                    android:text="enemy grid"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-            </FrameLayout>
+            <com.example.myapplication.SeaBattleBoardView
+                android:id="@+id/enemyBoard"
+                android:layout_width="match_parent"
+                android:layout_height="260dp"
+                android:layout_marginTop="6dp" />
 
             <Button
                 android:text="enemy map"
@@ -64,17 +64,17 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content">
 
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="240dp"
-                android:background="#1A000000">
+            <TextView
+                android:text="you"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
 
-                <TextView
-                    android:layout_gravity="center"
-                    android:text="your grid"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-            </FrameLayout>
+            <com.example.myapplication.SeaBattleBoardView
+                android:id="@+id/yourBoard"
+                android:layout_width="match_parent"
+                android:layout_height="260dp"
+                android:layout_marginTop="6dp" />
 
             <Button
                 android:text="your map"
